@@ -1,2 +1,2 @@
 # wwweb
-World Wide Website
+<strong>World Wide Website.</strong>
