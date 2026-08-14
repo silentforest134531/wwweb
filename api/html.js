@@ -1,4 +1,4 @@
-export default function handler(req, res) {
+export default async function handler(req, res) {
   async function FetchData() {
     const token = process.env.GITHUB_TOKEN
     if (!token) {
@@ -15,7 +15,19 @@ export default function handler(req, res) {
         }
       });
     if (!rsp.ok) {
-      throw new Error('API Error: Code ${rsp.status}');
+      throw new Error(`API Error: Code ${rsp.status}`);
     }
-  res.status(200).send("If you can see this, it worked!")
+  const text = await rsp.json();
+  return text;
+    } catch (error) {
+      console.error(error);
+      throw error;
+    }
+  }
+  try {
+    const data = await FetchData();
+    res.status(200).json({article: data});
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 }
