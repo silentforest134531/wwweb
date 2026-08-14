@@ -1,16 +1,19 @@
 export default async function handler(req, res) {
+  if (!req.query.q) {
+      return res.status(400).send('Query parameter required')
+    }
   async function FetchData() {
-    const query = req.query.q
+    const query = encodeURIComponent(req.query.q)
     const token = process.env.GITHUB_TOKEN
     if (!token) {
       throw new Error('No token found')
     }
-    const url = `https://api.github.com/search/code?q=path:${query} OR content:${query}`;
+    const url = `https://api.github.com/search/code?q=path:${query}+OR+content:${query}`;
     try {
       const rsp = await fetch(url, {
         method: 'GET',
         headers: {
-          `Authorization': Bearer ${token}`,
+          'Authorization': `Bearer ${token}`,
           'Accept': 'application/vnd.github+json',
           'User-Agent': 'wweb (Github: silentforest134531)'
         }
