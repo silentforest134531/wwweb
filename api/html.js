@@ -15,7 +15,7 @@ export default function handler(req, res) {
         }
       });
     if (!rsp.ok) {
-      throw new Error('API Error: Code ${response.status}');
+      throw new Error('API Error: Code ${rsp.status}');
     }
   res.status(200).send("If you can see this, it worked!")
 }
