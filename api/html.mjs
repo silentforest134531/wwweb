@@ -12,7 +12,7 @@ export default async function handler(req, res) {
         headers: {
           'Authorization': `Bearer ${token}`,
           'Accept': 'application/vnd.github+json',
-          'User-Agent': 'wweb (Github: silentforest134531)'
+          'User-Agent': 'wweb (Github: silentforest134531)',
           'X-GitHub-Api-Version': '2026-03-10'
         }
       });
