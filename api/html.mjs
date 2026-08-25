@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     if (!token) {
       throw new Error('No token found')
     }
-    const url = 'https://api.github.com/search/code?q=`repo:silentforest134531/wwweb';
+    const url = 'https://api.github.com/search/code?q=`repo:silentforest134531/wwweb`';
     try {
       const rsp = await fetch(url, {
         method: 'GET',
