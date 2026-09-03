@@ -1,4 +1,4 @@
-export default async function handler(req, res) {
+/* export default async function handler(req, res) {
   async function FetchData() {
     const query = encodeURIComponent(req.query.q)
     const token = process.env.GITHUB_TOKEN
