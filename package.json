@@ -1,0 +1,24 @@
+{
+  "name": "wwweb",
+  "version": "1.0.0",
+  "description": "<strong>World Wide Website.</strong> Runs on <strong>Vercel</strong>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/silentforest134531/wwweb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/silentforest134531/wwweb/issues"
+  },
+  "homepage": "https://github.com/silentforest134531/wwweb#readme",
+  "dependencies": {
+    "octokit": "^5.0.5"
+  }
+}
