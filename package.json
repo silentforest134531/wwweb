@@ -1,5 +1,4 @@
 {
-  "type": "module"
   "name": "wwweb",
   "version": "1.0.0",
   "description": "<strong>World Wide Website.</strong> Runs on <strong>Vercel</strong>",
