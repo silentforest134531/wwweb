@@ -1,10 +1,10 @@
 import { Octokit } from "octokit"
 
 const octokit = new Octokit({
-  auth: process.env.GITHUB-TOKEN
+  auth: process.env.GITHUB_TOKEN
 });
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   await octokit.request('GET /search/code', {
     q: 'Q',
     headers: {
