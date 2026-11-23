@@ -5,8 +5,9 @@ const octokit = new Octokit({
 });
 
 export default async function handler(req, res) {
+  const input = req.query.query
   const response = await octokit.request('GET /search/code', {
-    q: 'repo:silentforest134531/wwweb',
+    q: '${input}+inrepo:silentforest134531/wwweb+in:file+language:html',
     headers: {
       'X-GitHub-Api-Version': '2026-03-10'
     }
