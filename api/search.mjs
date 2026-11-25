@@ -13,6 +13,6 @@ export default async function handler(req, res) {
     }
   })
   const data = response.data
-  const paths = data.items.map(item => item.path).map(str => str.replace(".html", ""))
+  const paths = data.items.map(item => item.path).map(str => str.replace(".html", "")).filter(item => item !== "index");
   return res.status(200).json(paths)
 }
