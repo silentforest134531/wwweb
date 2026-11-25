@@ -13,6 +13,7 @@ export default async function handler(req, res) {
     }
   })
   const data = response.data
-  const paths = data.items.map(item => item.path).replaceAll(".html, "")
+  const paths = data.items.map(item => item.path)
+  const something = paths.replaceAll(".html, "")
   return res.status(200).json(paths)
 }
