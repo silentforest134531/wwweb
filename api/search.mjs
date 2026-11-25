@@ -13,5 +13,6 @@ export default async function handler(req, res) {
     }
   })
   const data = response.data
-  return res.status(200).json(data)
+  const paths = data.items.map(item => item.path);
+  return res.status(200).json(paths)
 }
