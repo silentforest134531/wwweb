@@ -24,7 +24,7 @@
     <script type="module">
       const params = new URLSearchParams(window.location.search);
       const query = params.get("query");
-      const response = await fetch(`api/search?query={query}`);
+      const response = await fetch(`api/search?query=${query}`);
       response.forEach(search => {
         const link = document.createElement('a');
         link.href = search;
