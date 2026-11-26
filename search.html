@@ -21,7 +21,7 @@
     <hr>
     <h2>Search Results</h2>
     <hr>
-    <script>
+    <script type="module">
       const params = new URLSearchParams(window.location.search);
       const query = params.get("query");
       const response = await fetch(`api/search?query={query}`);
