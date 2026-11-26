@@ -13,6 +13,6 @@ export default async function handler(req, res) {
     }
   })
   const data = response.data
-  const paths = data.items.map(item => item.path).map(str => str.replace(".html", "")).filter(item => item !== "index");
+  const paths = data.items.map(item => item.path).map(str => str.replace(".html", "")).filter(item => item !== "index").map(paths => 'https://wwweb-alpha.vercel.app' + paths)
   return res.status(200).json(paths)
 }
