@@ -21,5 +21,15 @@
     <hr>
     <h2>Search Results</h2>
     <hr>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const query = params.get("query")
+      const response = await fetch(`api/search?query={query}`)
+      response.forEach(search => {
+        const link = document.createElement('a')
+        link.href = search
+        link.textContent = link.href
+      }
+    </script>
   </body>
 </html>
