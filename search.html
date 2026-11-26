@@ -24,6 +24,7 @@
     <script type="module">
       const params = new URLSearchParams(window.location.search);
       const query = params.get("query");
+      document.querySelector('input[name="query"]').value = query
       const response = await fetch(`api/search?query=${query}`)
       const reply = await response.json();
       reply.forEach(search => {
