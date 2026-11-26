@@ -12,6 +12,6 @@ input[type="text"], input[type="search"] {
   background-color: white;
   color: black;
 }
-input[type="text"], input[type="search"] {
+input[type="text"]::placeholder, input[type="search"]::placeholder {
   color: black;
 }
